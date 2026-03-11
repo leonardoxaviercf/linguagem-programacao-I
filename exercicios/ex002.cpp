@@ -59,11 +59,57 @@ int main() {
             for (const auto& elemento : vetor_aluno) {
                 cout << "ID: " << elemento.id
                     << " | Nome: " << elemento.nome
+                    << " | Idade: " << elemento.idade
+                    << " | Nota 1: " << elemento.nota1
+                    << " | Nota 2: " << elemento.nota2
+                    << " | Nota 3: " << elemento.nota3
                     << " | Média: " << (elemento.nota1 + elemento.nota2 + elemento.nota3) / 3   
                     << endl;
             }
+        } else if (opc == 3) {
+            int alunoId;
+            int encontrarId = 0;
+            cout << "Digite o ID do aluno: " << endl;
+            cin >> alunoId;
+
+            for (const auto& elemento : vetor_aluno) {
+                if (alunoId == elemento.id) {
+                    encontrarId += 1;
+                }
+            }
+
+            if (encontrarId == 0) {
+                cout << "Nenhum aluno com esse ID." << endl;
+            } else if (encontrarId == 1) {
+                for (const auto& elemento : vetor_aluno) {
+                    if (alunoId == elemento.id) {
+                        cout << "ID: " << elemento.id
+                            << " | Nome: " << elemento.nome
+                            << " | Idade: " << elemento.idade
+                            << " | Nota 1: " << elemento.nota1
+                            << " | Nota 2: " << elemento.nota2
+                            << " | Nota 3: " << elemento.nota3
+                            << " | Média: " << (elemento.nota1 + elemento.nota2 + elemento.nota3) / 3   
+                            << endl;
+                    }
+                }
+            } else {
+                cout << "Erro: Temos mais de um aluno com esse ID." << endl;
+            }
+        } else if (opc == 4) {
+            int contarAlunos = 0;
+            float somarMedias = 0;
+
+            for (const auto& elemento : vetor_aluno) {
+                contarAlunos += 1;
+                somarMedias += (elemento.nota1 + elemento.nota2 + elemento.nota3) / 3;
+            }
+
+            cout << "Média geral da turma: " << somarMedias / contarAlunos << endl;
         } else if (opc == 0) {
             break;
+        } else {
+            cout << "Digite uma opção válida!" << endl;
         }
     }
 
