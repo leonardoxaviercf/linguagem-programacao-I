@@ -1,0 +1,68 @@
+O array tem uma série de problemas, como por exemplo: tamanho fixo e a ausênsia de métodos de adição, remoção ou de busca de itens
+Temos como contornar esses problemas com a STL
+
+Introdução à STL (Standard Template Library)
+
+Estrutura Vector
+Use vector quando:
+
+Você precisa de acesso aleatório rápido.
+O foco é em performance de leitura linear ou ordenação
+
+
+int main() {
+    vector<int> numeros = {1, 2, 3, 4, 5};
+
+    for (int n : numeros) {
+        cout << n << endl;
+    }
+}
+
+Estrutura list
+Use list quando:
+
+Você precisa inserir ou remover elementos no meio ou no início com frequência.
+Não precisa de acesso por índice (como v[2]), que a list não oferece.
+
+
+int main() {
+    list<int> numeros = {1, 2, 3, 4, 5};
+
+    cout << numeros.front() << endl;
+}
+
+Estrutura deque
+É uma sequência de elementos, assim como vector e list, mas com uma característica especial:
+Permite inserção e remoção eficiente tanto no início quanto no fim.
+
+Estrutura stack
+Na STL, stack é um container adaptador.
+Isso significa que ela usa outro container por baixo dos panos (por padrão, deque), mas expõe apenas as operações de pilha.
+
+Estrutura queue
+A queue é uma fila no sentido clássico:
+Estrutura FIFO (First In, First Out), ou seja, o primeiro elemento a entrar é o primeiro a sair.
+
+Estrutura set
+Set é uma estrutura ordenada que não aceita elementos duplicados.
+Para usar o set com tipos personalizados, é necessário implementar algumas operações a mais.
+
+Ao criar um set de um struct, como por exemplo: pessoas. Chegamos na seguinte situação:
+    Nós precisamos dizer para o C++ como ele deve trabalhar, diferentemente de tipos primitivos, como por exemplo o Introdução
+    Pro set saber qual elemento tem prioridade sobre qual, devemos indicar ao C++, utilizando a sobrecarga de operador, comparando duas pessoas e ordenando pelo atributo escolhido
+
+Estrutura unordered_set
+Set é uma estrutura sem ordem que não aceita elementos duplicados.
+Assim como o set, para tipos personalizados, é necessário implementar algumas operações a mais.
+
+
+Informações extras:
+Onde o Hash é usado
+1 - Integridade de dados
+        Enviar: Documento + CodigoHash
+        Receber: Se a Hash for igual, garantimos que o documento enviado é o mesmo que foi recebido
+
+2 - Armazenamento de senhas no banco de dados
+        1. Usuário insere login e senha
+        2. Login guardado normalmente, porém a senha é modificada em uma função Hash e o novo Hash é salvo no banco
+        3. Ao usuário efetuar o login, jogamos a senha na mesma função hash e verificamos se são iguais
