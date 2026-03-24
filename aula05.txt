@@ -1,0 +1,41 @@
+Modularização
+
+Organizar a nossa aplicação em menores partes. Sendo pacotes ou funções
+
+Exemplo: Crie uma aplicação interativa, em c++, de sistema bancário com as operações de abrir e encerrar conta, depósito, saque, transferência (via Pix e TED), emitir extrato, análise de empréstimo, Limite de Crédito Personalizado, Pagamento de contas, Estorno de operações, controle diário do pix. Tudo em apenas um arquivo.
+
+OBS: 
+Microserviços - Vamos tomar como exemplo o spotify. 
+    Problemas - De acordo com a quantidade de acessos, as requisições ao meu sistema, aumentam exponencialmente, aumentando todos os custo de produçao
+
+    Todos os serviços são acessados:
+        Player de música
+        Sistema de pagamento
+        Gerenciamento de contas
+        Gerenciamento das músicas
+
+    Se eu precisar atualizar o sistema de pagamento, vai derrubar as outras operações.
+
+    Para resolver esses Problemas, vamos criar aplicações diferntes.
+    Cada operação é uma aplicação diferente.
+
+    O acesso a cada operação após a redistribuição, tende a aumentar, pois será apenas o acesso específico
+
+    Resumidamente: Quebra a aplicação grande e diminui em aplicações menores, ocasionando em melhor gerenciamento de recursos, diminuindo o custo de produção
+
+Problemas em falta de modularização
+    Código díficil de manter
+    ...
+
+Responsabilidade de uma classe
+    Toda a lógica responsavel por uma função, deve ser muito bem definida e separada. Por exemplo:
+        A função soma() só deve ser responsavel por somar números, na hora de imprimir deverá ser usado outra função.
+    Uma classe só pode ter atributos referentes a classe específica. Por exemplo:
+        Classe aluno, não por ter o atributo nomeProfessor, pois isso já é atributo de outra classe
+
+Como resolver o problema do loop ciclo de dependencia
+    Usando forward declaration (declaração antecipada) - é uma técnica para informar ao compilador que um tipo existe antes de mostrar sua definição completa
+    Dificuldades: Teremos que estruturar toda a aplicação utilizando ponteiros
+
+C++20 Modulos
+    
