@@ -1,0 +1,15 @@
+Modificadores de acesso
+    public -> Visível em qualquer lugar
+    protected -> Visível no mesmo pacote
+    private -> Visível apenas dentro da própria classe
+
+Modificadores de não acesso
+    static -> Associado a classe, não à instância
+    const -> Torna algo imutável
+
+Const em c++
+    Cria um valor que não pode ser alterado depois que ele for inicializado
+
+Sempre que estiver atributos estáticos, acessar diretamente com a classe (igual o Java)
+
+Métodos estáticos so acessam atributos estáticos

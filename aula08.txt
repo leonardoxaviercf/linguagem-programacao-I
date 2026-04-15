@@ -1,0 +1,36 @@
+Algorítmos de ordenação
+
+A = {2, 5, 3, 1, 4} - Não ordenado
+B = {1, 2, 3, 4, 5} - Ordenado
+C = {5, 4, 3, 2, 1} - Ordenado
+
+Relação de ordem
+    Ordem não-estrita (ou ampla)
+        Reflixidade:
+            Para todo X pertence a A, X está relacionado por ele mesmo por uma relação R(x, x)
+        Antissimetria:
+            Para quaisquer X e Y em A, se x se relaciona com Y e Y se relaciona com X, então X e Y são iguais
+        Transitividade:
+            Para quaisquer X, Y e Z pertencente a A, se X se relaciona com Y e Y se relaciona com Z, então X se relaciona com Z
+        Resumidamente, relação em comparação de >= ou <=
+    
+    Ordem estrita:
+        Irreflixividade:
+            Para todo X pertencente a A, não ocorre que X esteja relacionado com ele mesmo
+        Assimetria:
+            Para quaisquer X e Y pertencente a A, se X se relaciona com Y, então Y não se relaciona com x
+        Transitividade:
+            Para quaisquer X, Y e Z pertencente a A, se X se relaciona com Y e Y se relaciona com Z, então X se relaciona com Z
+        Resumidamente, relaciona em comparação de > ou <
+
+Qual seria uma estratégia de ordenação muito ruim?
+    Permutar aleatoriamente e após isso, analisar se está na ordem correta/desejada
+
+    Relação de crescimento fatorial
+
+ordenação por seleção
+    No pior dos casos
+        Quantidade de trocas: n, onde n é o número de elementos do conjunto
+        Quantidade de comparação: n^2, onde n é o número de elementos do conjunto
+
+Implementar o algoritmo de ordenação por seleção
