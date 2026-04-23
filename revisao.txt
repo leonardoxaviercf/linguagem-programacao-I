@@ -1,0 +1,76 @@
+Estrutura de dados - Tipos
+    Lista
+        Consigo inserir elementos em qualquer posição
+        Posso ler o elemento em qualquer posição
+    Fila
+        Meus elementos são inseridos são sempre no fim
+        A saída da minha fila é sempre pelos primeiros
+    Pilha
+        Sempre adiciona os elementos no fim da fila
+        Sempre seleciona os os ultimos elementos
+    Set
+        Lista que não aceita elementos duplicados e os elementos são sempre ordenados
+    Unordened_set
+        Mesma coisa que o set, so que sem ser ordenado
+
+Tipos de dados abstratos (TAD)
+    Dados isolados (int idade = 20) -> Dados estruturados (double[3] salario = 2300.00) -> Dados abstratos (struct pessoa [nome; idade])
+
+Struct em C++
+    Construtores - Segue a mesma lógica do Java, servindo para construir os atributos do struct diretamente na chamada
+        Lembrar que também temos a sobrecarga de Construtores
+    Destrutor
+        (revisar)
+
+Sobrecarga de métodos
+    Argumentos padrão deverá ser sempre os últimos atributos do meu método, para evitar que o compilador não consiga definir para qual atributo deverá ser setado a informação
+
+    Podemos sobrecarregar o método adicionando mais atributos ou mudando o tipo dos atributos
+        void imprimir(int x)
+        void imprimir(double x)
+        void imprimir(string x)
+
+    Detalhe: Na sobrecarga, se na primeira chamada tiver um atributo e na segunda chamada tiver dois atributos e um deles for padrão, o C++ não conseguirá distiguir qual método chamar
+
+Modularização
+    Estratégia para construir um software a partir de diferentes arquivos e pacotes centralizando classes com lógicas semelhantes ou correlacionadas, exemplo: pacote com classes que trabalham com banco de dados, outro pacote com classes que trabalham com a API
+
+    Cuidado com as dependências circulares
+        Para criar A precisa de B e para criar B precisa de a
+
+Módulos
+
+Exceções
+    vector<int> numeros = {1, 2, 3}
+
+    try {
+        cout << numeros.at(10) << endl;
+    }
+
+    catch(out_of_range& e) {
+        cout << "Deu o erro: " << e << endl;
+    }
+
+    Lembrar que temos o re-lançamento da exceção, se um método é chamado por outro método, podemos lançar a exceção do método de baixo para o de cima
+
+Obs:
+    this->nome = n - como adicionar atributo no construtor
+
+    lembrar de ao definir um módulo, se for usar o using namespace, devemos colocar ele abaixo do módulo. Exemplo:
+        namespace matematica {
+            int somar(int a, int b) {
+                return a + b;
+            }
+        }
+
+        // Antes do using namespace
+        cout << matematica::somar(2, 3) << endl;
+
+        // Depois do using namespace
+        using namespace matematica;
+
+        cout << somar(2, 3) << endl;
+
+    usar o using namespace pode ocasior ambiguidades se tiver outra função chamada somar() fora do módulo matemática
+
+    métodos estáticos só conseguem acessar atributo estáticos
