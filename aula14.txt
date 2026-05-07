@@ -1,0 +1,5 @@
+Injeção de dependência
+    SOLID -> Open close
+        Aberto para extensão - Pode adicionar novo código
+        Fechado para modificação - Não pode modificar o código
+    
