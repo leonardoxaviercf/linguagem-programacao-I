@@ -1,0 +1,6 @@
+Herança
+    É o mecanismo de orientação a objetos que permite que uma classe herde caracterísitcas de outra
+    
+Polimorfismo
+    Vem do grego que significa "muitas formas"
+    
