@@ -1,0 +1,5 @@
+Classes abstratas
+    Não podem ser instanciadas
+    Métodos somente virtuais
+        Não tem corpo
+        Devem ser sobrescritar obrigatoriamente
