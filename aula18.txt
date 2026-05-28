@@ -1,0 +1,49 @@
+vtable
+vptr
+
+vtable -> Tabelas que contem  os métodos das classes
+/           Personagem          /
+/     virtual void atacar()     /
+/      void exibirDados()       /
+
+
+/             Mago              /
+/     virtual void atacar()     /
+/ void Personagem::exibirDados()/
+/     void aprenderMagia()      /
+
+
+/           Guerreiro           /
+/     virtual void atacar()     /
+/ void Personagem::exibirDados()/
+/      void afiarEspadada()     /
+
+
+vptr -> Ponteiro que aponta para a vtable do objeto real
+
+Personagem* m = new Mago();
+m vptr ---------------> mago vtable
+
+
+Interfaces
+
+A --/> B
+é um --> A é um B
+
+Gato --/> Animal
+Gato é um Animal
+
+Se você implementa X, você DEVE SABER FAZER Y
+
+** Interfaces **
+
+- Todos os métodos são abstratos
+- Não tem atributos
+    - Se tiver, eles tem que ser publicos, estáticos e constantes
+- Não tem construtor
+- Não pode ser instanciado
+
+Em C++ não tem Interfaces, pelo menos propriamente dita
+    Simulamos todo esse comportamento
+        Cria uma classe abstrata
+        Seguindo os parâmetros acima
